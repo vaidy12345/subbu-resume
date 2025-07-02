@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Add smooth reveal animations for sections
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section[id]');
     
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

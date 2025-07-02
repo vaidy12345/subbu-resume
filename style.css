@@ -1109,6 +1109,10 @@ body {
 
 /* Responsive Design for Story Page */
 @media (max-width: 768px) {
+    .story-page {
+        padding: 4rem 0 3rem;
+    }
+    
     .story-page .container {
         padding: 0 1rem;
     }
@@ -1157,6 +1161,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .story-page {
+        padding: 3rem 0 2rem;
+    }
+    
     .story-section {
         margin-bottom: 3rem;
     }
