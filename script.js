@@ -21,7 +21,6 @@ function configureHeader(currentPage) {
     const navLinks = document.querySelectorAll('.nav-link');
     
     if (currentPage === 'index') {
-        logoText.textContent = 'Subramanian Gopalkrishnan';
         // For index page, links are anchor-based
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
@@ -31,7 +30,6 @@ function configureHeader(currentPage) {
             }
         });
     } else if (currentPage === 'story') {
-        logoText.textContent = 'Subu';
         // For story page, links should go back to index.html with anchors
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
@@ -78,6 +76,19 @@ function initializeNavigation() {
                 }
             });
         });
+    }
+
+    // Navbar background opacity on scroll
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        function updateNavbarBackground() {
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(26, 32, 44, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(26, 32, 44, 0.95)';
+            }
+        }
+        window.addEventListener('scroll', updateNavbarBackground);
     }
 }
 
@@ -168,21 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.addEventListener('scroll', highlightNavigation);
-});
-
-// Navbar background opacity on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.navbar');
-    
-    function updateNavbarBackground() {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(26, 32, 44, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(26, 32, 44, 0.95)';
-        }
-    }
-
-    window.addEventListener('scroll', updateNavbarBackground);
 });
 
 // Add typing effect to hero title (optional enhancement)
