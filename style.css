@@ -792,22 +792,38 @@ body {
     }
     
     .page-container {
-        padding-top: 120px;
+        padding: 6rem 1rem 2rem;
     }
     
     .nav-menu {
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 70px; /* Adjust based on navbar height */
         flex-direction: column;
+        background-color: #1a202c;
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background: rgba(26, 32, 44, 0.98);
-        padding: 2rem 0;
+        height: calc(100vh - 70px);
+        transition: all 0.3s ease-in-out;
+        padding-top: 2rem;
+        gap: 0;
     }
     
     .nav-menu.active {
-        display: flex;
+        left: 0;
+    }
+    
+    .nav-menu li {
+        padding: 1rem 2rem;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .nav-menu li:hover {
+        background-color: rgba(79, 209, 197, 0.1);
+    }
+    
+    .nav-link::after {
+        display: none;
     }
     
     .hamburger {
