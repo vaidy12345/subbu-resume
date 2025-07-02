@@ -1,39 +1,97 @@
+// Header loading function
+function loadHeader() {
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+            
+            // Configure header based on current page
+            const currentPage = document.body.getAttribute('data-page');
+            configureHeader(currentPage);
+            
+            // Re-initialize navigation functionality after header is loaded
+            initializeNavigation();
+        })
+        .catch(error => console.error('Error loading header:', error));
+}
+
+// Configure header for specific pages
+function configureHeader(currentPage) {
+    const logoText = document.getElementById('logo-text');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (currentPage === 'index') {
+        logoText.textContent = 'Subramanian Gopalkrishnan';
+        // For index page, links are anchor-based
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                // Keep as is for index page
+                link.setAttribute('href', href);
+            }
+        });
+    } else if (currentPage === 'story') {
+        logoText.textContent = 'Subu';
+        // For story page, links should go back to index.html with anchors
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                link.setAttribute('href', 'index.html' + href);
+            }
+        });
+    }
+}
+
+// Initialize navigation functionality (to be called after header loads)
+function initializeNavigation() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle mobile menu
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (hamburger) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // Add smooth scrolling for index page only
+    const currentPage = document.body.getAttribute('data-page');
+    if (currentPage === 'index') {
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    smoothScroll(href);
+                }
+            });
+        });
+    }
+}
+
+// Load header when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    loadHeader();
+});
+
 // Smooth scrolling function
 function smoothScroll(target) {
     document.querySelector(target).scrollIntoView({
         behavior: 'smooth'
     });
 }
-
-// Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Toggle mobile menu
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking on nav links
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Add smooth scrolling to all nav links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = this.getAttribute('href');
-            smoothScroll(target);
-        });
-    });
-});
 
 // Tab functionality for Projects section
 document.addEventListener('DOMContentLoaded', function() {
