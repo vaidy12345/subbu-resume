@@ -23,6 +23,11 @@ body {
     padding: 0 2rem;
 }
 
+.page-container {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+}
+
 /* Typography */
 .section-title {
     font-size: 2.5rem;
