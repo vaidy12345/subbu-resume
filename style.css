@@ -773,4 +773,14 @@ body {
     .skill-category {
         padding: 1.5rem;
     }
+}
+
+.hero-portrait {
+    width: 360px;
+    height: 360px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 4px solid #4FD1C5;
+    box-shadow: 0 4px 24px rgba(79, 209, 197, 0.15);
+    background: #1a202c;
 } 
