@@ -29,7 +29,7 @@ function configureHeader(currentPage) {
                 link.setAttribute('href', href);
             }
         });
-    } else if (currentPage === 'story') {
+    } else if (currentPage === 'story' || currentPage === 'resume') {
         // For story page, links should go back to index.html with anchors
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
