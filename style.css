@@ -172,6 +172,31 @@ body {
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.hero-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.skill-tag-hero {
+    background-color: rgba(79, 209, 197, 0.1);
+    border: 1px solid rgba(79, 209, 197, 0.3);
+    color: #E2E8F0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag-hero:hover {
+    background-color: rgba(79, 209, 197, 0.2);
+    transform: translateY(-2px);
+}
+
 .cta-button {
     background: linear-gradient(135deg, #4FD1C5, #ED8936);
     border: none;
