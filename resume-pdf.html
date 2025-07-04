@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Subramanian Gopalkrishnan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            padding: 0.5in;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 1.5em;
+            border-bottom: 2px solid #2c5a3e;
+            padding-bottom: 1em;
+        }
+        
+        .header h1 {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #2c5a3e;
+            margin-bottom: 0.3em;
+        }
+        
+        .header .subtitle {
+            font-size: 12pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 0.5em;
+            font-size: 10pt;
+        }
+        
+        .section {
+            margin-bottom: 1.5em;
+        }
+        
+        .section h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #2c5a3e;
+            border-bottom: 1px solid #2c5a3e;
+            padding-bottom: 0.2em;
+            margin-bottom: 0.8em;
+        }
+        
+        .section h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.3em;
+        }
+        
+        .section h4 {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 0.3em;
+        }
+        
+        .employment-item {
+            margin-bottom: 1.2em;
+            page-break-inside: avoid;
+        }
+        
+        .employment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5em;
+        }
+        
+        .employment-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c5a3e;
+        }
+        
+        .employment-period {
+            font-size: 10pt;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .project-item {
+            margin-bottom: 1em;
+            page-break-inside: avoid;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3em;
+        }
+        
+        .project-title {
+            font-size: 11pt;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .project-role {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+        }
+        
+        ul {
+            margin-left: 1.2em;
+            margin-bottom: 0.8em;
+        }
+        
+        li {
+            margin-bottom: 0.3em;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin-top: 0.5em;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 0.8em;
+            border-radius: 4px;
+            border-left: 3px solid #2c5a3e;
+        }
+        
+        .skill-category h4 {
+            color: #2c5a3e;
+            font-size: 10pt;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        
+        .skill-tags {
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        
+        .skill-tags span {
+            display: inline-block;
+            margin-right: 0.5em;
+            margin-bottom: 0.2em;
+            color: #555;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            margin-top: 0.5em;
+        }
+        
+        .highlight {
+            background: #f0f8f5;
+            padding: 0.8em;
+            border-left: 3px solid #2c5a3e;
+            margin: 0.5em 0;
+            border-radius: 3px;
+        }
+        
+        .certifications {
+            font-size: 10pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0.3in;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .employment-item,
+            .project-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Subramanian (Subu) Gopalkrishnan</h1>
+        <div class="subtitle">Data Governance Leader and Data Architect</div>
+        <div class="contact-info">
+            <span><strong>Phone:</strong> +1 224 572 8858</span>
+            <span><strong>Email:</strong> Subramanian.Gopalkrishnan@gmail.com</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Brief Summary</h2>
+        <ul>
+            <li><strong>Accomplished Data Governance Leader and Architect</strong> with over <strong>18 years of experience</strong> delivering enterprise-wide data strategies across <strong>utilities, healthcare, and life sciences</strong> industries.</li>
+            <li><strong>Proven expertise</strong> in designing and implementing <strong>scalable data governance frameworks, modern data architectures, and AI-enabled platforms</strong> to support organizational transformation.</li>
+            <li><strong>Skilled in cross-functional leadership</strong> and driving <strong>regulatory compliance</strong> initiatives.</li>
+            <li><strong>Adept at transforming complex datasets into actionable business insights</strong> that improve decision-making and operational efficiency.</li>
+            <li><strong>Recognized for aligning data strategy with business goals</strong> and successfully promoting adoption through effective <strong>stakeholder engagement</strong>.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Key Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Technical Skills</h4>
+                <div class="skill-tags">
+                    <span>Data Governance,</span>
+                    <span>Data Architecture,</span>
+                    <span>Multi-Cloud Platforms,</span>
+                    <span>ETL and SQL,</span>
+                    <span>Reporting & Visualization</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Leadership</h4>
+                <div class="skill-tags">
+                    <span>Program & Project Management,</span>
+                    <span>Team Management,</span>
+                    <span>Client Relationship Management,</span>
+                    <span>Agile Development Practices</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Industries</h4>
+                <div class="skill-tags">
+                    <span>Power & Utilities,</span>
+                    <span>Life Sciences,</span>
+                    <span>Healthcare,</span>
+                    <span>Higher Education</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Employment History</h2>
+        
+        <div class="employment-item">
+            <div class="employment-header">
+                <div class="employment-title">Data Governance, Engineering and Analytics Manager - Deloitte</div>
+                <div class="employment-period">Feb 2015 - Current</div>
+            </div>
+            <h4>Key Roles & Responsibilities</h4>
+            <ul>
+                <li>Spearheaded the implementation of enterprise-wide data governance frameworks, aligning strategy with business objectives and regulatory mandates.</li>
+                <li>Led the rollout of data cataloging, metadata management, and stewardship programs. Establishing policies, procedures, and KPIs for data ownership, data quality, lineage, and access control across multi-departmental clients.</li>
+                <li><strong>Partnered with executive stakeholders</strong> to drive data governance adoption, enabling cultural transformation and data accountability.</li>
+                <li><strong>Designed and architected modern, cloud-native data platforms</strong>, integrating structured, semi-structured, and unstructured data sources across Azure, AWS, and Snowflake.</li>
+                <li><strong>Managed cross-functional teams</strong> of data engineers, analysts, and architects in agile environments across multiple client programs.</li>
+                <li><strong>Mentored junior and senior resources</strong> across technical, business, and career growth paths.</li>
+            </ul>
+        </div>
+
+        <div class="employment-item">
+            <div class="employment-header">
+                <div class="employment-title">Analytics Developer – Cognizant</div>
+                <div class="employment-period">Jan 2010 - Feb 2015</div>
+            </div>
+        </div>
+
+        <div class="employment-item">
+            <div class="employment-header">
+                <div class="employment-title">Analyst - UST Global</div>
+                <div class="employment-period">Nov 2007 – Jan 2010</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Proficiency</h2>
+        <div class="tech-grid">
+            <div class="skill-category">
+                <h4>Data Governance</h4>
+                <div class="skill-tags">
+                    <span>Informatica Data Management Cloud,</span>
+                    <span>Collibra,</span>
+                    <span>SAP Information Steward</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud Hyperscalers</h4>
+                <div class="skill-tags">
+                    <span>Azure,</span>
+                    <span>AWS</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Databases</h4>
+                <div class="skill-tags">
+                    <span>Oracle, SQL Server, Teradata,</span>
+                    <span>Synapse, Redshift, MongoDB</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Data Management & Integration</h4>
+                <div class="skill-tags">
+                    <span>Databricks, Snowflake,</span>
+                    <span>Informatica (IICS and Powercenter),</span>
+                    <span>Azure Data Factory</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>AI/ML</h4>
+                <div class="skill-tags">
+                    <span>Palantir Foundry</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education & Certifications</h2>
+        <div class="highlight">
+            <h4>Education</h4>
+            <ul>
+                <li>Executive Program for Management - Indian Institute of Management – Calcutta, India</li>
+                <li>Bachelors in Engineering, Electronics and Communications - Anna University, India</li>
+            </ul>
+        </div>
+        <div class="certifications">
+            <h4>Certifications</h4>
+            <ul>
+                <li>Microsoft Certified: Azure Data Engineer Associate (★★)</li>
+                <li>Dataiku Certified Practitioner - June 2024</li>
+                <li>Azure Certified Data Engineer – March 2023</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Key Projects & Role Highlights</h2>
+        
+        <div class="project-item">
+            <h3>Electric and Water Utility in California</h3>
+            
+            <div class="project-header">
+                <div class="project-title">Data Governance Implementation</div>
+                <div class="project-role">Data Governance Lead | Sep 2024 - Current</div>
+            </div>
+            <p><em>Led strategic implementation of Enterprise Data Catalog and Quality solution, aligning development with business objectives and regulatory compliance. Defined critical data policies and fostered cross-functional collaboration.</em></p>
+            <p><strong>Technologies:</strong> Informatica Data Management Cloud, SAP Information Steward, Palantir Foundry, Azure</p>
+            
+            <div class="project-header">
+                <div class="project-title">AI Driven Image Recognition and Processing</div>
+                <div class="project-role">Data Architect | Sep 2023 - Jun 2024</div>
+            </div>
+            <p><em>Designed end-to-end data architecture for AI-driven image recognition to analyze drone images for vegetation encroachment analysis.</em></p>
+        </div>
+
+        <div class="project-item">
+            <h3>Large Health Plan in Midwest</h3>
+            
+            <div class="project-header">
+                <div class="project-title">Claims Platform Modernization</div>
+                <div class="project-role">Data Architect | June 2020 - Mar 2022</div>
+            </div>
+            <p><em>Transformed legacy claims processing system by migrating to HealthEdge platform. Architected modern data warehouse with robust data models and HIPAA-compliant security protocols.</em></p>
+            <div class="highlight">
+                <p><strong>Strategic Bridge Builder:</strong> Translated complex business needs into technical data solutions, fostering collaboration between HealthEdge implementation team, IT, and business users.</p>
+            </div>
+            <p><strong>Technologies:</strong> Azure Ecosystem, Informatica IICS, SQL Server</p>
+        </div>
+
+        <div class="project-item">
+            <h3>Large Life Sciences Company – Device Manufacturer</h3>
+            
+            <div class="project-header">
+                <div class="project-title">Supplier Traceability Solution</div>
+                <div class="project-role">Data Architect, Data Engineering Lead | June 2018 - Mar 2019</div>
+            </div>
+            <p><em>Led global implementation of end-to-end supplier traceability solution ensuring regulatory compliance and product quality standards for life sciences regulatory requirements.</em></p>
+            <p><strong>Technologies:</strong> Azure Ecosystem, Collibra, Databricks</p>
+        </div>
+    </div>
+</body>
+</html> 
